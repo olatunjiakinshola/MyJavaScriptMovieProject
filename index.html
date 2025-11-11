@@ -92,12 +92,23 @@
       font-size: 14px;
     }
 
-    /* 📱 Responsive for small screens */
-    @media (max-width: 600px) {
-      .search-bar input {
-        width: 200px;
-      }
-    }
+    @media (max-width: 1200px) {
+  #movie-list {
+    grid-template-columns: repeat(4, 1fr);  /* 4 items per row on medium screens */
+  }
+}
+
+  @media (max-width: 900px) {
+  #movie-list {
+    grid-template-columns: repeat(3, 1fr);  /* 3 items per row on small screens */
+  }
+}
+
+  @media (max-width: 600px) {
+  #movie-list {
+    grid-template-columns: repeat(2, 1fr);  /* 2 items per row on extra small screens */
+  }
+}
   </style>
 </head>
 <body>
@@ -170,3 +181,4 @@
 </body>
 
 </html>
+
